@@ -19,6 +19,7 @@ import { useDefaultPath, useTabs } from "hooks";
 import { Tab } from "@leafygreen-ui/tabs";
 import { StyledTabs } from "components/styles/StyledTabs";
 import { paths } from "contants/routes";
+import LogView from "lobster-logview";
 
 enum TaskTab {
   Logs = "logs",
@@ -95,6 +96,7 @@ export const Task: React.FC = () => {
             <StyledTabs selected={selectedTab} setSelected={selectTabHandler}>
               <Tab name="Logs" id="task-logs-tab">
                 <Logs />
+                <LogView />
               </Tab>
               <Tab name="Tests" id="task-tests-tab">
                 <TestsTable />
